@@ -6,6 +6,8 @@
     <base-button @click="selectTab('add-resource')" :mode="addButtonMode"
       >Add Resource</base-button
     >
+  </base-card>
+  <base-card>
     <component :is="selectedTab"></component>
   </base-card>
 </template>
@@ -45,7 +47,7 @@ export default {
     },
     addButtonMode() {
       return this.selectedTab === "add-resource" ? null : "flat";
-    }
+    },
   },
   methods: {
     selectTab(tab) {
